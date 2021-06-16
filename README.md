@@ -29,16 +29,6 @@ The Onlineshop is a virtual store on the Internet where customers can browse the
 
 The Onlineshop is expanded permanently through new products and services to offer a product portfolio corresponding to the market. Private customers and business customers can order the selected products of the Online service online quickly and comfortably.
 
-
-# Running the Project Locally
-
-First, clone the repository to your local machine:
-
-```bash
-git clone https://github.com/jamilnoyda/onlineshop.git
-```
-
-
 Install the requirements:
 
 ```bash

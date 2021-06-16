@@ -1,9 +1,8 @@
-from django.shortcuts import render, get_object_or_404
-from shop.models import Category, Product
-from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from wishlist.models import Wishlist, WishlistItem
-from django.contrib.postgres.search import SearchVector
+from django.shortcuts import render, get_object_or_404
+
+from shop.models import Category, Product, Comment
+from wishlist.models import Wishlist
 
 
 def product_list(request, category_slug=None):
@@ -86,7 +85,6 @@ def product_search(request):
 
 
 def product_detail(request, id, slug):
-
     product = get_object_or_404(
         Product,
         id=id,
@@ -94,8 +92,10 @@ def product_detail(request, id, slug):
         available=True
     )
 
+    comments = Comment.objects.filter(product=product)
+
     return render(
         request,
         'shop/product/detail.html',
-        {'product': product}
+        {'product': product, 'comments': comments}
     )

@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f102e45f-072c-437a-9856-aab620a2efed" name="Default Changelist" comment="added pycharm support">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/onlineshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/onlineshop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/migrations/0002_comment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myshop/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/detail_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/detail_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop/product/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/product/detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +51,7 @@
     <option name="height" value="701" />
   </component>
   <component name="ProjectId" id="1tyeTfG7zGdyVfx5dwWdGrcvouO" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -147,7 +143,8 @@
       <updated>1538659407450</updated>
       <workItem from="1623745778558" duration="82000" />
       <workItem from="1623745863137" duration="5954000" />
-      <workItem from="1623809556532" duration="1281000" />
+      <workItem from="1623809556532" duration="1713000" />
+      <workItem from="1623812639915" duration="3849000" />
     </task>
     <task id="LOCAL-00001" summary="added pycharm support">
       <created>1538660877860</created>
