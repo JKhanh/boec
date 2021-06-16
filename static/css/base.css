@@ -317,9 +317,13 @@ ul.errorlist {
 }
 
 .recommendations.cart .item {
-    margin-right:10px;
+    margin-right: 10px;
 }
 
 .recommendations.cart img {
-    width:120px;
+    width: 120px;
+}
+
+.checked {
+    color: yellow;
 }

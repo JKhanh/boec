@@ -93,9 +93,14 @@ def product_detail(request, id, slug):
     )
 
     comments = Comment.objects.filter(product=product)
+    rating = 0
+    for c in comments:
+        rating += c.rating
 
+    if len(comments) > 0:
+        rating /= len(comments)
     return render(
         request,
         'shop/product/detail.html',
-        {'product': product, 'comments': comments}
+        {'product': product, 'comments': comments, 'rating': rating, 'rating_star': range(int(rating))}
     )

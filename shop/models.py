@@ -52,6 +52,7 @@ class Comment(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     content = models.TextField(max_length=200)
+    rating = models.IntegerField(default=0)
 
     class Meta:
         ordering = ('-created',)
