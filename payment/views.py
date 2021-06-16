@@ -1,19 +1,22 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render, get_object_or_404, reverse
-
-# Create your views here.
-from paypal.standard.forms import PayPalPaymentsForm
-from orders.models import Order
-from django.views.decorators.csrf import csrf_exempt
-from django.conf import settings
-from orders.models import Order
 from decimal import *
 
+from django.conf import settings
+from django.shortcuts import render, get_object_or_404, reverse
+from django.views.decorators.csrf import csrf_exempt
+# Create your views here.
+from paypal.standard.forms import PayPalPaymentsForm
 
-@csrf_exempt
-def payment_done(request):
+from orders.models import Order
+
+
+# @csrf_exempt
+def payment_done(request, id):
+    order = get_object_or_404(Order, id=id)
+    order.paid = True
+    order.save()
     return render(request, 'payment/done.html')
 
 
@@ -31,9 +34,9 @@ def payment_process(request, id):
         'amount': '%.2f' % order.get_total_cost().quantize(Decimal('.01')),
         'item_name': 'Order {}'.format(order.id),
         'invoice': str(order.id),
-        'currency_code': 'INR',
+        'currency_code': 'USD',
         'notify_url': 'http://{}{}'.format(host, reverse('paypal-ipn')),
-        'return_url': 'http://{}{}'.format(host, reverse('payment:done')),
+        'return_url': 'http://{}{}'.format(host, reverse('payment:done', args=[order.id])),
         'cancel_return': 'http://{}{}'.format(host, reverse('payment:canceled')),
     }
     form = PayPalPaymentsForm(initial=paypal_dict)
