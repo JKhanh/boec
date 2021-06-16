@@ -1,6 +1,7 @@
 {% extends "shop/base.html" %}
 {% load static %}
 {% load number_filter %}
+{% load humanize %}
 
 {% block title %}
     {{ product.name }}
@@ -37,7 +38,7 @@
 
               <div class="card-body">
                   <h3 class="card-title">{{ product.name }}</h3>
-                  <h4>{{ product.price }}$</h4>
+                  <h4>{{ product.price|intcomma }}$</h4>
                   <h6>{{ rating }}</h6>
                   {% for i in rating_star %}
                       <i class="text-warning fa fa-star"></i>
